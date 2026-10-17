@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallium (Ga) — Khám phá nguyên tố 31</title>
+<style>
+:root{--bg:#081225;--panel:#111f39;--panel2:#172947;--text:#edf4ff;--muted:#afc0dc;--cyan:#62e6e0;--gold:#ffd166;--pink:#ff7eb6;--line:#2c4265}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#18365c 0,#081225 40%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{padding:48px 22px 32px;max-width:1150px;margin:auto}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.4rem,6vw,5rem);line-height:1.02;margin:12px 0}h1 span{color:var(--cyan)}h2{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.15;margin:0 0 14px}h3{margin:0 0 8px}.lead{color:var(--muted);font-size:1.1rem;max-width:750px}
+.container{max-width:1150px;margin:auto;padding:0 22px 60px}.hero-grid,.two,.three{display:grid;gap:18px}.hero-grid{grid-template-columns:1.1fr .9fr}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.panel{background:linear-gradient(145deg,rgba(23,41,71,.96),rgba(13,27,49,.96));border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 14px 40px #0002;margin-bottom:18px}
+.periodic{width:145px;height:145px;border-radius:22px;background:linear-gradient(145deg,#76fff0,#33b9c8);color:#07172b;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 45px #62e6e044;margin:auto}
+.periodic .num{font-size:.9rem;font-weight:800;align-self:flex-start;margin-left:18px}.periodic strong{font-size:3.7rem;line-height:1}.periodic small{font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.stat{background:#0a1830;border:1px solid var(--line);padding:12px;border-radius:14px}.stat b{display:block;color:var(--gold);font-size:1.15rem}.stat span{font-size:.8rem;color:var(--muted)}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 25px}nav a{color:var(--text);text-decoration:none;border:1px solid var(--line);background:#0d1b31;padding:8px 12px;border-radius:999px;font-size:.9rem}nav a:hover{border-color:var(--cyan)}
+button{border:0;border-radius:12px;padding:11px 16px;background:var(--cyan);color:#06202a;font-weight:800;cursor:pointer;font-size:.95rem}button.secondary{background:#243a5d;color:var(--text);border:1px solid #3b557c}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.small{font-size:.9rem;color:var(--muted)}.tag{display:inline-block;padding:4px 9px;border-radius:999px;background:#203b5b;color:var(--cyan);font-size:.78rem;font-weight:800}
+.video-stage{min-height:290px;border-radius:18px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 45%,#1c6683,#101b3d 55%,#081225)}
+.video-stage:before,.video-stage:after{content:"";position:absolute;border:1px solid #62e6e055;border-radius:50%;width:260px;height:100px;transform:rotate(25deg);animation:orbit 8s linear infinite}.video-stage:after{transform:rotate(-35deg);width:300px;height:120px;animation-duration:11s}
+@keyframes orbit{to{transform:rotate(385deg)}}.video-content{position:relative;z-index:1;padding:25px;max-width:530px}.video-content .big{font-size:4rem;line-height:1.2;color:var(--cyan);font-weight:900}.video-content p{margin:8px 0;color:#dceaff}
+.progress{height:7px;background:#263b5b;border-radius:10px;overflow:hidden;margin:16px 0}.progress span{display:block;width:0;height:100%;background:var(--cyan);transition:width .2s}
+.scriptbox{background:#09172b;border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:14px}.scriptbox p{margin:0}.scene-label{color:var(--gold);font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.atom-wrap{height:330px;display:grid;place-items:center;perspective:850px;overflow:hidden;background:radial-gradient(circle,#163a5c,#0a1730 70%);border-radius:18px}
+.atom{width:245px;height:245px;position:relative;transform-style:preserve-3d;animation:turn 16s linear infinite}.nucleus{position:absolute;left:50%;top:50%;width:72px;height:72px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff0a7,#ff9d54 45%,#b94463);box-shadow:0 0 35px #ff9d5477;display:grid;place-items:center;color:#1b1730;font-weight:900;z-index:4}
+.shell{position:absolute;left:50%;top:50%;border:1px solid #62e6e0a8;border-radius:50%;transform-style:preserve-3d}.s1{width:105px;height:105px;margin:-52.5px;transform:rotateX(70deg)}.s2{width:155px;height:155px;margin:-77.5px;transform:rotateY(70deg) rotateX(25deg)}.s3{width:205px;height:205px;margin:-102.5px;transform:rotateX(65deg) rotateY(35deg)}.s4{width:245px;height:245px;margin:-122.5px;transform:rotateY(70deg) rotateX(20deg)}
+.electron{position:absolute;width:10px;height:10px;background:#fff;border-radius:50%;box-shadow:0 0 12px var(--cyan);top:-5px;left:50%;}.s2 .electron{background:var(--gold);box-shadow:0 0 12px var(--gold)}.s3 .electron{background:var(--pink);box-shadow:0 0 12px var(--pink)}
+@keyframes turn{to{transform:rotateY(360deg) rotateX(8deg)}}
+.shell-key{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.shell-key span{background:#0a1830;border:1px solid var(--line);padding:7px 10px;border-radius:10px;font-size:.88rem}
+ul{padding-left:20px}li{margin:7px 0}.callout{border-left:4px solid var(--gold);padding:10px 14px;background:#2c2b2a55;border-radius:0 12px 12px 0;color:#ffe9b2}
+.step{display:flex;gap:12px;margin:14px 0}.step b{flex:0 0 32px;height:32px;border-radius:10px;background:#204d66;color:var(--cyan);display:grid;place-items:center}
+.question{padding:17px;border-radius:15px;background:#0a1830;border:1px solid var(--line);margin:14px 0}.question p{font-weight:750;margin:0 0 10px}.answers{display:grid;gap:8px}.answers button{background:#172b49;border:1px solid #304969;color:var(--text);text-align:left;font-weight:600}.answers button:hover{border-color:var(--cyan)}.answers button.correct{background:#124a43;border-color:#62e6a9}.answers button.wrong{background:#562b42;border-color:#ff7eb6}.feedback{min-height:25px;color:var(--muted);font-size:.9rem;margin-top:8px}.score{font-size:1.2rem;color:var(--gold);font-weight:800}
+footer{text-align:center;color:var(--muted);padding:22px;border-top:1px solid var(--line);font-size:.88rem}
+@media(max-width:760px){.hero-grid,.two,.three{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}header{padding-top:32px}.panel{padding:18px}.atom-wrap{height:290px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Phòng thí nghiệm nguyên tố · Số 31</div>
+  <h1>Gallium <span>Ga</span></h1>
+  <p class="lead">Kim loại có thể nóng chảy gần nhiệt độ cơ thể — và là một trong những vật liệu quan trọng phía sau đèn LED xanh, chip công suất và công nghệ bán dẫn.</p>
+  <nav aria-label="Điều hướng"><a href="#video">Video 75 giây</a><a href="#ung-dung">Ứng dụng</a><a href="#nguyen-tu">Nguyên tử 3D</a><a href="#thi-nghiem">Thí nghiệm</a><a href="#quiz">Thử thách</a></nav>
+  <div class="hero-grid">
+    <section class="panel">
+      <span class="tag">Thông tin nhanh</span>
+      <h2 style="margin-top:12px">Một kim loại “tan chảy” trong lòng bàn tay?</h2>
+      <p>Gallium là kim loại màu bạc, mềm và có nhiệt độ nóng chảy rất thấp so với hầu hết kim loại.</p>
+      <div class="stats">
+        <div class="stat"><b>31</b><span>Số hiệu nguyên tử</span></div>
+        <div class="stat"><b>69,723</b><span>Nguyên tử khối tương đối</span></div>
+        <div class="stat"><b>29,76°C</b><span>Nhiệt độ nóng chảy</span></div>
+      </div>
+      <p class="small">Chu kì 4 · Nhóm 13 · Cấu hình electron: [Ar] 3d¹⁰ 4s² 4p¹</p>
+    </section>
+    <section class="panel" style="display:grid;place-items:center;text-align:center">
+      <div class="periodic" aria-label="Ô nguyên tố Gallium">
+        <span class="num">31</span><strong>Ga</strong><small>Gallium</small>
+      </div>
+      <p class="small">Không phải mọi hợp chất gallium đều có cùng tính chất với kim loại gallium nguyên chất.</p>
+    </section>
+  </div>
+</header>
+<main class="container">
+  <section id="video" class="panel">
+    <span class="tag">Video giải thích · khoảng 75 giây</span>
+    <h2 style="margin-top:12px">Gallium: kim loại đặc biệt của thế giới điện tử</h2>
+    <p class="small">Đây là video mô phỏng bằng hoạt họa trên trang, kèm lời thuyết minh tiếng Việt. Nhấn phát để chạy từng cảnh; nếu trình duyệt hỗ trợ giọng đọc, lời thuyết minh sẽ được đọc thành tiếng.</p>
+    <div class="video-stage" aria-live="polite">
+      <div class="video-content">
+        <div class="big" id="sceneSymbol">Ga</div>
+        <h3 id="sceneTitle">Gặp gỡ Gallium</h3>
+        <p id="sceneText">Nguyên tố số 31, kim loại mềm màu bạc.</p>
+        <span class="tag" id="sceneTime">Cảnh 1 / 5</span>
+      </div>
+    </div>
+    <div class="progress" aria-label="Tiến trình video"><span id="progressBar"></span></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button id="playVideo">▶ Phát thuyết minh</button>
+      <button id="pauseVideo" class="secondary">Tạm dừng</button>
+      <button id="restartVideo" class="secondary">↻ Xem lại</button>
+    </div>
+    <div class="scriptbox"><div class="scene-label">Lời thuyết minh</div><p id="narration">Gallium, ký hiệu Ga, có số hiệu nguyên tử 31. Đây là kim loại màu bạc, mềm và có một đặc điểm đáng chú ý: nó nóng chảy ở khoảng 29,76 độ C.</p></div>
+    <p class="small">Lưu ý: thời lượng thực tế tùy tốc độ đọc của trình duyệt. Nội dung được chia thành 5 cảnh để dễ theo dõi.</p>
+  </section>
+
+  <section id="ung-dung" class="panel">
+    <span class="tag">Từ phòng khám đến nhà máy</span>
+    <h2 style="margin-top:12px">Gallium dùng để làm gì?</h2>
+    <div class="two">
+      <article class="panel" style="margin:0;background:#0b1930">
+        <h3>🩺 Y tế & nghiên cứu sinh học</h3>
+        <ul>
+          <li><b>Gallium-68:</b> đồng vị phóng xạ dùng làm chất đánh dấu trong một số kỹ thuật PET, giúp hình ảnh hóa các đích sinh học cụ thể.</li>
+          <li><b>Gallium-67:</b> được dùng trong một số xét nghiệm hình ảnh y học hạt nhân để hỗ trợ đánh giá một số bệnh lý.</li>
+          <li><b>Hợp chất gallium:</b> được nghiên cứu trong các hướng điều trị và kháng khuẩn; việc dùng trên người phụ thuộc chỉ định và chế phẩm y tế được phê duyệt.</li>
+        </ul>
+        <p class="small">Đồng vị dùng trong y tế không phải kim loại gallium để cầm nắm. Chúng được chuẩn bị và sử dụng bởi cơ sở chuyên môn.</p>
+      </article>
+      <article class="panel" style="margin:0;background:#0b1930">
+        <h3>🏭 Công nghiệp & công nghệ</h3>
+        <ul>
+          <li><b>Gallium nitride (GaN):</b> dùng trong LED xanh/trắng, bộ sạc và linh kiện điện tử công suất.</li>
+          <li><b>Gallium arsenide (GaAs):</b> dùng trong một số linh kiện tần số cao, quang điện và pin mặt trời chuyên dụng.</li>
+          <li><b>Bán dẫn hợp chất:</b> hỗ trợ thiết bị truyền thông, radar và chuyển đổi năng lượng hiệu quả.</li>
+        </ul>
+        <p class="small">Gallium thường có giá trị nhất khi được kết hợp thành hợp chất bán dẫn, không phải chỉ dùng ở dạng kim loại nguyên chất.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="nguyen-tu" class="panel">
+    <span class="tag">Mô hình trực quan</span>
+    <h2 style="margin-top:12px">Mô hình nguyên tử 3D của Ga</h2>
+    <div class="two" style="align-items:center">
+      <div>
+        <div class="atom-wrap" role="img" aria-label="Mô hình nguyên tử gallium dạng vỏ electron quay">
+          <div class="atom">
+            <div class="shell s1"><i class="electron"></i></div>
+            <div class="shell s2"><i class="electron"></i><i class="electron" style="top:auto;bottom:-5px;left:35%"></i></div>
+            <div class="shell s3"><i class="electron"></i><i class="electron" style="top:auto;bottom:-5px;left:25%"></i><i class="electron" style="left:10%;top:65%"></i></div>
+            <div class="shell s4"><i class="electron"></i></div>
+            <div class="nucleus">Ga</div>
+          </div>
+        </div>
+        <div class="shell-key"><span>Vỏ K: 2 e⁻</span><span>Vỏ L: 8 e⁻</span><span>Vỏ M: 18 e⁻</span><span>Vỏ N: 3 e⁻</span></div>
+      </div>
+      <div>
+        <h3>Đọc mô hình</h3>
+        <p>Nguyên tử gallium trung hòa có <b>31 proton</b> trong hạt nhân và <b>31 electron</b> xung quanh.</p>
+        <p>Phân bố electron theo lớp là <b>2 – 8 – 18 – 3</b>. Ba electron ở lớp ngoài cùng góp phần giải thích tính chất hóa học của gallium.</p>
+        <div class="callout">Mô hình này mang tính minh họa: electron không thực sự chạy trên các đường tròn cố định như hành tinh, và hình vẽ không thể hiện đúng tỉ lệ kích thước.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="thi-nghiem" class="panel">
+    <span class="tag">Thí nghiệm thực tế · quan sát có kiểm soát</span>
+    <h2 style="margin-top:12px">Gallium nóng chảy trong nước ấm</h2>
+    <p>Vì gallium nóng chảy ở khoảng 29,76°C, một mẫu nhỏ có thể chuyển từ rắn sang lỏng khi được làm ấm nhẹ. Nên thực hiện như một buổi trình diễn có người lớn/giáo viên phụ trách.</p>
+    <div class="two">
+      <div>
+        <h3>Dụng cụ</h3>
+        <ul><li>Mẫu gallium kim loại nhỏ, có nguồn gốc rõ ràng, đặt trong lọ/chén chuyên dụng.</li><li>Cốc nước ấm khoảng 35–40°C và nhiệt kế.</li><li>Khay chống tràn, kính bảo hộ, găng tay phù hợp.</li></ul>
+        <h3>Các bước</h3>
+        <div class="step"><b>1</b><div>Quan sát mẫu gallium rắn trong vật chứa kín hoặc dụng cụ chuyên dụng.</div></div>
+        <div class="step"><b>2</b><div>Đặt vật chứa vào bể nước ấm; không đun trực tiếp và không để nước lẫn vào mẫu.</div></div>
+        <div class="step"><b>3</b><div>Quan sát mẫu mềm đi/chuyển lỏng khi nhiệt độ vượt điểm nóng chảy.</div></div>
+        <div class="step"><b>4</b><div>Lấy ra bằng dụng cụ, để nguội có kiểm soát và ghi lại nhiệt độ quan sát được.</div></div>
+      </div>
+      <div>
+        <h3>Dự đoán & giải thích</h3>
+        <div class="question">
+          <p>Điều gì có thể xảy ra khi mẫu được làm ấm đến khoảng 35°C?</p>
+          <div class="answers" id="experimentAnswers">
+            <button data-correct="true">Mẫu gallium có thể nóng chảy</button>
+            <button data-correct="false">Mẫu chắc chắn sôi</button>
+            <button data-correct="false">Số proton trong hạt nhân tăng lên</button>
+          </div>
+          <div class="feedback" id="experimentFeedback" aria-live="polite"></div>
+        </div>
+        <div class="callout"><b>An toàn:</b> không chạm trực tiếp hoặc để gallium dính lên da, quần áo hay đồ dùng. Gallium có thể làm giòn/phá hỏng nhôm khi tiếp xúc. Không đổ xuống bồn rửa; thu hồi và xử lý theo hướng dẫn của giáo viên/phòng thí nghiệm. Không thực hiện nếu thiếu giám sát và quy trình an toàn.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="panel">
+    <span class="tag">Câu hỏi tương tác thông minh</span>
+    <h2 style="margin-top:12px">Thử thách Gallium</h2>
+    <p>Chọn một đáp án cho mỗi câu. Hệ thống phản hồi ngay và giải thích ngắn để giúp bạn nhớ kiến thức.</p>
+    <div id="quizQuestions"></div>
+    <div class="score" id="score" aria-live="polite">Điểm: 0 / 5</div>
+    <button id="resetQuiz" class="secondary" style="margin-top:12px">Làm lại bài trắc nghiệm</button>
+  </section>
+  <section class="panel">
+    <h2>Ghi nhớ nhanh</h2>
+    <ul>
+      <li>Ga là nguyên tố số 31, thuộc chu kì 4, nhóm 13.</li>
+      <li>Nhiệt độ nóng chảy khoảng 29,76°C — thấp đối với một kim loại.</li>
+      <li>Các hợp chất GaN và GaAs quan trọng trong công nghệ bán dẫn.</li>
+      <li>Đồng vị phóng xạ của gallium có ứng dụng trong chẩn đoán hình ảnh y học hạt nhân.</li>
+    </ul>
+  </section>
+</main>
+<footer>Trang học tập tương tác về nguyên tố Gallium (Ga) · Nội dung mang tính giáo dục, không thay thế hướng dẫn an toàn phòng thí nghiệm hoặc tư vấn y tế.</footer>
+<script>
+const scenes=[
+ {symbol:"Ga",title:"Gặp gỡ Gallium",text:"Nguyên tố số 31, kim loại mềm màu bạc.",narration:"Gallium, ký hiệu Ga, có số hiệu nguyên tử 31. Đây là kim loại màu bạc, mềm và có một đặc điểm đáng chú ý: nó nóng chảy ở khoảng 29,76 độ C."},
+ {symbol:"29,76°C",title:"Kim loại dễ nóng chảy",text:"Chỉ cần ấm hơn nhiệt độ phòng trong ngày nóng, gallium có thể chuyển sang dạng lỏng.",narration:"Nhiệt độ nóng chảy của gallium chỉ khoảng 29,76 độ C. Vì thế, trong điều kiện đủ ấm, gallium rắn có thể tan chảy. Tuy nhiên, không nên tự ý cầm mẫu kim loại vì cần kiểm soát việc tiếp xúc và tránh làm nhiễm bẩn đồ vật."},
+ {symbol:"GaN",title:"Nền tảng của ánh sáng",text:"Gallium nitride góp mặt trong LED và thiết bị điện tử công suất.",narration:"Một ứng dụng nổi bật là gallium nitride, hay GaN. Vật liệu bán dẫn này được dùng trong LED và nhiều bộ chuyển đổi điện năng nhỏ gọn, hiệu quả. Gallium arsenide, viết tắt GaAs, cũng có vai trò trong linh kiện tần số cao và quang điện."},
+ {symbol:"PET",title:"Dấu vết trong y học",text:"Một số đồng vị gallium được dùng trong chẩn đoán hình ảnh.",narration:"Trong y học hạt nhân, gallium-68 có thể được gắn vào các chất đánh dấu để chụp PET. Gallium-67 cũng được sử dụng trong một số xét nghiệm hình ảnh. Đây là các chế phẩm phóng xạ chuyên dụng, không phải mẫu kim loại để tự làm thí nghiệm."},
+ {symbol:"31 p⁺",title:"Tóm tắt",text:"31 proton · 31 electron · phân bố lớp 2–8–18–3.",narration:"Tóm lại, nguyên tử gallium trung hòa có 31 proton và 31 electron, phân bố theo các lớp là 2, 8, 18 và 3. Gallium kết nối một tính chất vật lý thú vị với các công nghệ quan trọng trong điện tử và y tế."}
+];
+let sceneIndex=0,videoTimer=null,videoStarted=false;
+const $=id=>document.getElementById(id);
+function renderScene(i){sceneIndex=i;const s=scenes[i];$("sceneSymbol").textContent=s.symbol;$("sceneTitle").textContent=s.title;$("sceneText").textContent=s.text;$("sceneTime").textContent=`Cảnh ${i+1} / ${scenes.length}`;$("narration").textContent=s.narration;$("progressBar").style.width=((i+1)/scenes.length*100)+"%";}
+function stopVideo(){if(videoTimer){clearTimeout(videoTimer);videoTimer=null}if("speechSynthesis"in window)window.speechSynthesis.cancel()}
+function speakScene(){if(!videoStarted)return;const s=scenes[sceneIndex];if("speechSynthesis"in window){const u=new SpeechSynthesisUtterance(s.narration);u.lang="vi-VN";u.rate=.92;u.onend=()=>{if(!videoStarted)return;if(sceneIndex<scenes.length-1){videoTimer=setTimeout(()=>{renderScene(sceneIndex+1);speakScene()},450)}else{videoStarted=false;$("playVideo").textContent="▶ Phát lại video"}};window.speechSynthesis.speak(u)}else{videoTimer=setTimeout(()=>{if(sceneIndex<scenes.length-1){renderScene(sceneIndex+1);speakScene()}else{videoStarted=false}},15000)}}
+$("playVideo").addEventListener("click",()=>{stopVideo();videoStarted=true;$("playVideo").textContent="▶ Đang phát…";speakScene()});
+$("pauseVideo").addEventListener("click",()=>{videoStarted=false;stopVideo();$("playVideo").textContent="▶ Tiếp tục"});
+$("restartVideo").addEventListener("click",()=>{stopVideo();videoStarted=false;renderScene(0);$("playVideo").textContent="▶ Phát thuyết minh"});
+renderScene(0);
+$("experimentAnswers").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const correct=b.dataset.correct==="true";$("experimentFeedback").textContent=correct?"Chính xác! 35°C cao hơn nhiệt độ nóng chảy của gallium, nên mẫu có thể chuyển sang lỏng.":"Chưa đúng. Hãy so sánh 35°C với nhiệt độ nóng chảy khoảng 29,76°C. Ở đây thay đổi trạng thái là điều có thể xảy ra.";[...$("experimentAnswers").querySelectorAll("button")].forEach(x=>x.disabled=true);b.classList.add(correct?"correct":"wrong")});
+const qs=[
+ {q:"1. Gallium có số hiệu nguyên tử là bao nhiêu?",a:["13","31","68"],c:1,why:"Số hiệu nguyên tử bằng số proton trong hạt nhân. Gallium có 31 proton."},
+ {q:"2. Nhiệt độ nóng chảy của gallium gần giá trị nào nhất?",a:["−10°C","29,76°C","100°C"],c:1,why:"Gallium nóng chảy ở khoảng 29,76°C, khá thấp so với nhiều kim loại."},
+ {q:"3. Phân bố electron theo lớp của Ga trung hòa là gì?",a:["2–8–18–3","2–8–8–13","2–18–11"],c:0,why:"Gallium có 31 electron: 2 + 8 + 18 + 3 = 31."},
+ {q:"4. Vật liệu nào có chứa gallium và thường được dùng trong LED?",a:["GaN","NaCl","CaCO₃"],c:0,why:"GaN là gallium nitride, một vật liệu bán dẫn quan trọng trong LED và điện tử công suất."},
+ {q:"5. Phát biểu nào đúng về gallium-68?",a:["Là loại nhôm dùng trong dây điện","Có thể dùng làm chất đánh dấu trong PET","Là tên khác của gallium kim loại thông thường"],c:1,why:"Gallium-68 là đồng vị phóng xạ được dùng trong một số chất đánh dấu PET dưới sự quản lý của chuyên gia y học hạt nhân."}
+];
+let answers=Array(qs.length).fill(null);
+function renderQuiz(){const root=$("quizQuestions");root.innerHTML="";qs.forEach((q,i)=>{const card=document.createElement("div");card.className="question";const p=document.createElement("p");p.textContent=q.q;card.appendChild(p);const opts=document.createElement("div");opts.className="answers";q.a.forEach((a,j)=>{const b=document.createElement("button");b.textContent=String.fromCharCode(65+j)+". "+a;b.disabled=answers[i]!==null;if(answers[i]!==null&&j===q.c)b.classList.add("correct");if(answers[i]===j&&j!==q.c)b.classList.add("wrong");b.addEventListener("click",()=>{answers[i]=j;renderQuiz()});opts.appendChild(b)});card.appendChild(opts);const f=document.createElement("div");f.className="feedback";f.setAttribute("aria-live","polite");f.textContent=answers[i]===null?"Chọn một đáp án.":(answers[i]===q.c?"Đúng rồi! ":"Chưa chính xác. ")+q.why;card.appendChild(f);root.appendChild(card)});const score=answers.reduce((n,a,i)=>n+(a===qs[i].c?1:0),0);$("score").textContent=`Điểm: ${score} / ${qs.length}`;}
+$("resetQuiz").addEventListener("click",()=>{answers=Array(qs.length).fill(null);renderQuiz()});renderQuiz();
+</script>
+</body>
+</html>
